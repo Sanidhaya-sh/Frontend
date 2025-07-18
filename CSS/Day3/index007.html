@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .desktop {
+      width: 95vw;
+      margin: auto;
+    }
+
+    .box {
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="desktop">
+    <center><h3 style="margin-top:30px;margin-bottom: 10px;;">DESKTOP</h3></center>
+    <div style="display: flex;">
+    <div class="box" style="background-color: #1e2a38;width:10vw;">HEADER</div>
+    <div class="box" style="background-color: #f44356;width:80vw;">MENU</div>
+    </div>
+    <div class="box" style="background-color: #4a90e2;height:30vh;">HERO</div>
+    <div style="display: flex;">
+    <div class="box" style="background-color: #233142;height:28vh;width:45vw;">MAIN</div>
+    <div style="background-color: white;height:22vh;color: white;width:22vw;">hi</div>
+    <div>
+    <div class="box" style="background-color: #49c5b6;color: #000;height:11.5vh;width:23vw;">EXTRA</div>
+    <div class="box" style="background-color: #c2e9f7; color: #000;height:11vh;">IMAGE</div>
+    </div>
+    
+    </div>
+    <div class="box" style="background-color: #fcd65e; color: #000;height:8vh ;">BANNER</div>
+   </div>
+
+</body>
+</html>
