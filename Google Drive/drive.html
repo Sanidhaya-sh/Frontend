@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Drive | Clone</title>
+    <link
+      rel="icon"
+      href="https://icones.pro/wp-content/uploads/2022/08/logo-google-drive.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+    .no-scrollbar::-webkit-scrollbar {
+    display: none;
+     }
+    .no-scrollbar {
+      scrollbar-width: none;      
+      -ms-overflow-style: none;   
+    }
+    </style>
+  </head>
+  <body>
+    <!-- main div -->
+   <div class="bg-black h-screen flex flex-col">
+
+    <!-- header -->
+    <div class="bg-white/10 h-[9%] w-full pt-1 pb-2 pl-5.5 pr-4.5 flex flex-row justify-between items-center">
+      <!-- drive -->
+      <div class="flex flex-row h-full items-center gap-1.5 cursor-pointer" title="Drive">
+        <div class="bg-[url('https://icones.pro/wp-content/uploads/2022/08/logo-google-drive.png')] bg-contain bg-no-repeat bg-center h-11 w-11"></div>
+      <span class="text-white/85 text-[22px] mb-1">Drive</span>
+    </div>
+     <!-- search bar -->
+            <div class="bg-white/7 h-12.5 w-170 rounded-full flex md:flex justify-between items-center pl-3 pr-3 mt-1">
+              <form action="">
+              <div class="flex flex-row gap-2 items-center">
+              <button type="submit" class="flex flex-row rounded-full justify-center items-center hover:bg-white/10 cursor-pointer h-8 w-8" title="Search">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  class="fill-white/75"
+                >
+                  <path
+                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+                  />
+                </svg>
+              </button>
+              <input
+                type="text"
+                placeholder="Search in drive"
+                class="h-full w-130 rounded-xl placeholder-white/90 text-white text-[17px] focus:outline-none"
+              />
+              </div>
+              </form>
+               <button class="flex flex-row rounded-full justify-center items-center hover:bg-white/10 cursor-pointer h-8 w-8" title="Advance search">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M440-120v-240h80v80h320v80H520v80h-80Zm-320-80v-80h240v80H120Zm160-160v-80H120v-80h160v-80h80v240h-80Zm160-80v-80h400v80H440Zm160-160v-240h80v80h160v80H680v80h-80Zm-480-80v-80h400v80H120Z"/></svg>
+               </button>
+            </div>
+
+            <!-- last icons -->
+               <div class="flex flex-row gap-3">
+                <!-- 1st -->
+                <button class="flex flex-row rounded-full justify-center items-center hover:bg-white/10 cursor-pointer h-8 w-8" title="Ready for offline">
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                </button>
+                <!-- 2nd -->
+                <button class="flex flex-row rounded-full justify-center items-center hover:bg-white/10 cursor-pointer h-8 w-8" title="Support">
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                </button>
+                <!-- 3rd -->
+                <button class="flex flex-row rounded-full justify-center items-center hover:bg-white/10 cursor-pointer h-8 w-8" title="Settings">
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>
+                </button>
+                <!-- 5th -->
+                 <button class="flex flex-row rounded-full justify-center items-center hover:bg-white/10 cursor-pointer h-8 w-8" title="Google Apps">
+               <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M240-160q-33 0-56.5-23.5T160-240q0-33 23.5-56.5T240-320q33 0 56.5 23.5T320-240q0 33-23.5 56.5T240-160Zm240 0q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm240 0q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160ZM240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400ZM240-640q-33 0-56.5-23.5T160-720q0-33 23.5-56.5T240-800q33 0 56.5 23.5T320-720q0 33-23.5 56.5T240-640Zm240 0q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Zm240 0q-33 0-56.5-23.5T640-720q0-33 23.5-56.5T720-800q33 0 56.5 23.5T800-720q0 33-23.5 56.5T720-640Z"/></svg>
+                 </button>
+
+                 <!-- profile -->
+                <div class="bg-green-900/90 h-8 w-8 rounded-full flex justify-center items-center ml-1" title="Google account">
+                    <span class="text-white text-[17.5px]">S</span>
+               </div>
+              </div>
+            </div>
+
+            <!-- middle div -->
+            <div class="relative h-screen w-full flex flex-row">
+              <!-- side bar -->
+              <div class="relative bg-white/10 h-full w-[17%] pt-1.5 pb-2 pl-4 pr-4.5 gap-5">
+                <!-- new button -->
+                <button class="bg-white/14 h-14 w-25 flex flex-row justify-center items-center rounded-2xl active:scale-95 transition-transform duration-100 hover:bg-white/20 gap-2.5 pr-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="27px" viewBox="0 -960 960 960" width="27px" fill="#D9D9D9"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+                  <span class="text-white text-[14px] mb-1">New</span>
+                </button>
+
+                <!-- Ist list -->
+                 <ul class="flex flex-col pt-4 pr-3">
+                  <!-- home -->
+                <li class="bg-blue-500/40 h-8 pl-4.5 flex flex-row items-center rounded-2xl gap-3.5 hover:bg-white/20 cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                  <span class="text-blue-200 text-[14px] flex">Home</span>
+                </li>
+                <!-- my drive -->
+               <li class="h-8 pl-4.5 flex flex-row items-center rounded-2xl gap-3.5 hover:bg-white/8 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-240h560v-400H200v400Zm0 80v80h560v-80H200Zm0 0v80-80Z"/></svg>
+                <span class="text-white text-[14px] flex">My Drive</span>
+              </li>
+              <!-- computers -->
+               <li class="h-8 pl-4.5 flex flex-row items-center rounded-2xl gap-3.5 hover:bg-white/8 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M480-540ZM80-160v-80h400v80H80Zm120-120q-33 0-56.5-23.5T120-360v-360q0-33 23.5-56.5T200-800h560q33 0 56.5 23.5T840-720H200v360h280v80H200Zm600 40v-320H640v320h160Zm-180 80q-25 0-42.5-17.5T560-220v-360q0-25 17.5-42.5T620-640h200q25 0 42.5 17.5T880-580v360q0 25-17.5 42.5T820-160H620Zm100-300q13 0 21.5-9t8.5-21q0-13-8.5-21.5T720-520q-12 0-21 8.5t-9 21.5q0 12 9 21t21 9Zm0 60Z"/></svg>
+                 <span class="text-white text-[14px] flex">Computers</span>
+                </li>
+                 </ul>
+
+                 <!-- 2nd list -->
+                 <ul class="flex flex-col pt-4">
+                <!-- shared with me -->
+               <li class="h-8 pl-4.5 flex flex-row items-center rounded-2xl gap-3.5 hover:bg-white/8 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[14px] flex">Shared with me</span>
+              </li>
+              <!-- recent -->
+                 <li class="h-8 pl-4.5 flex flex-row items-center rounded-2xl gap-3.5 hover:bg-white/8 cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>
+                  <span class="text-white text-[14px] flex">Recent</span>
+                </li>
+                <!-- starred -->
+               <li class="h-8 pl-4.5 flex flex-row items-center rounded-2xl gap-3.5 hover:bg-white/8 cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>
+                   <span class="text-white text-[14px] flex">Starred</span></li>
+                 </ul>
+
+                 <!-- 3rd list -->
+                 <ul class="flex flex-col pt-4 border-b-4 border-[#DF9D9B] pb-2">
+                  <!-- span -->
+             <li class="h-8 pl-4.5 flex flex-row items-center rounded-2xl gap-3.5 hover:bg-white/8 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240Zm40 412L346-160H160v-186L28-480l132-134v-186h186l134-132 134 132h186v186l132 134-132 134v186H614L480-28Zm0-112 100-100h140v-140l100-100-100-100v-140H580L480-820 380-720H240v140L140-480l100 100v140h140l100 100Zm0-340Z"/></svg>
+               <span class="text-white text-[14px] flex">Spam</span>
+              </li>
+              <!-- bin -->
+               <li class="h-8 pl-4.5 flex flex-row items-center rounded-2xl gap-3.5 hover:bg-white/8 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+                 <span class="text-white text-[14px] flex">Bin</span>
+                </li>
+                <!-- waarning -->
+                <li class="h-8 pl-4.5 flex flex-row items-center rounded-2xl gap-3.5 hover:bg-white/8 cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#DF9D9B"><path d="m40-120 440-760 440 760H40Zm138-80h604L480-720 178-200Zm302-40q17 0 28.5-11.5T520-280q0-17-11.5-28.5T480-320q-17 0-28.5 11.5T440-280q0 17 11.5 28.5T480-240Zm-40-120h80v-200h-80v200Zm40-100Z"/></svg>
+                <span class="text-white text-[14px] flex">Storage full</span>
+                </li>
+                </ul>
+                <!-- storage -->
+                <span class="text-[#DF9D9B] text-[15px] font-semibold pl-5 pt-1">15.35 GB of 15 GB used</span>
+                <button class="bg-[#DF9D9B] hover:bg-[#DF9D9BD9] cursor-pointer rounded-full h-9 w-42 flex justify-center items-center ml-5 mt-3 active:scale-95 transition-transform duration-100">
+                  <span class="text-brown-600 text-[14px]">Get more storage</span>
+                </button>
+              </div>
+
+              <!-- files -->
+              <div class="absolute z-20 top-[-1px] left-[16.5%] bg-black h-[98%] rounded-2xl w-[79.5%] absolute top-5 left-5 p-0 flex flex-col">
+                <!-- top warning -->
+                <div class="h-20 w-full bg-red-600/60 flex flex-col rounded-t-2xl rounded-b-md">
+                  <div class="flex flex-row pt-3 pl-4 gap-4">
+                   <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="white"><path d="m40-120 440-760 440 760H40Zm138-80h604L480-720 178-200Zm302-40q17 0 28.5-11.5T520-280q0-17-11.5-28.5T480-320q-17 0-28.5 11.5T440-280q0 17 11.5 28.5T480-240Zm-40-120h80v-200h-80v200Zm40-100Z"/></svg>
+                  <span class="text-white/80 font-semibold text-[14px]">Can't create, edit or upload … If your storage is full for two or more years, your files may be deleted from Drive and Gmail. Get 30 GB of storage for ₹59.00 ₹0 for 1 month.</span>
+                </div>
+                 <div class="flex flex-row justify-end">
+                  <!-- clean up sapce -->
+                  <button class="hover:bg-white/5 cursor-pointer rounded-full h-9 w-30 flex justify-center items-center mb-0.5 active:scale-95 transition-transform duration-100">
+                  <span class="text-red-200/80 text-[14px]">Clean up sapce</span>
+                </button>
+                <!-- start trial -->
+                <button class="hover:bg-white/5 cursor-pointer rounded-full h-9 w-20 flex justify-center items-center mb-0.5 active:scale-95 transition-transform duration-100">
+                  <span class="text-red-200/80 text-[14px]">Start trial</span>
+                </button>
+                </div>
+                </div>
+                <!-- welcome -->
+                <div class="h-15 w-full flex flex-row justify-between items-center pl-5 pt-1 pr-7">
+                  <span class="text-white text-[23px]">Welcome to Drive</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" class="mt-3" fill="#D9D9D9"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                </div>
+                <ul class="flex flex-col pl-3 overflow-y-auto no-scrollbar">
+                  <li>
+                    <button class="h-10 w-50 flex flex-row gap-3 rounded-full hover:bg-white/10 cursor-pointer p-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="flex hover:fill-blue-300" fill="#D9D9D9"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                  <span class="text-white text-[16px] hover:text-blue-300 font-semibold">Suggested Folders</span>
+                </button>
+              </li>
+              <li class="pl-2 pt-5 pb-5">
+                <button class="h-14 w-70 bg-white/10 flex flex-row items-center rounded-xl hover:bg-white/20 cursor-pointer p-2 gap-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M440-280h320v-22q0-45-44-71.5T600-400q-72 0-116 26.5T440-302v22Zm160-160q33 0 56.5-23.5T680-520q0-33-23.5-56.5T600-600q-33 0-56.5 23.5T520-520q0 33 23.5 56.5T600-440ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"/></svg>
+                     <div class="flex flex-col text-left">
+                  <span class="text-white/80 text-[15px] font-semibold">Quiz</span>
+                  <span class="text-white/80 text-[10px]">In Shared with me</span>
+                  </div>
+                </button>
+              </li>
+               <li>
+                    <button class="h-10 w-50 flex flex-row gap-3 rounded-full hover:bg-white/10 cursor-pointer p-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="flex hover:fill-blue-300" fill="#D9D9D9"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                  <span class="text-white text-[16px] hover:text-blue-300 font-semibold">Suggested Files</span>
+                </button>
+              </li>
+              <li class="flex flex-row justify-between h-12 ">
+                <span class="text-white text-[14px] w-30">Name</span>
+                <span class="text-white text-[14px]">Reason suggested</span>
+                <span class="text-white text-[14px]">Owner</span>
+                <span class="text-white text-[14px] mr-10">Location</span>
+              </li>
+              <li  class="h-12 flex flex-row justify-between items-center border-y-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+             <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+               <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+              <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+              <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+              <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+              <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+              <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+              <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+             <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+             <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+               <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+              <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+               <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+               <li  class="h-12 flex flex-row justify-between items-center border-b-[0.1px] border-white/50 hover:bg-white/15 flex-shrink-0 whitespace-nowrap pr-5">
+                <div class="flex flex-row gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                <span class="text-white text-[14px]">Frontend Batch E Class 12</span>
+                </div>
+                <span class="text-white/80 text-[14px]">You opened | 1 Aug 2025</span>
+                <div class="flex gap-2">
+              <div class="rounded-full w-5 h-5 bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80t8lDmScALEtvUEOQxmReEFnLzTEGR9zbg&s')] bg-cover hover:opacity-80 cursor-pointer"></div>
+               <span class="text-white/80 text-[12px]">abc@gamil..</span>
+             </div>
+             <div class="flex flex-row gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="240x" viewBox="0 -960 960 960" width="20px" fill="#D9D9D9"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg>
+                <span class="text-white text-[12px] flex">Shared with me</span>
+                </div>
+              </li>
+            </ul>
+            </div>
+
+            <div class="relative z-0 left-[78.5%] bg-white/10 h-full w-[4.5%] pt-1.5 pb-2 pl-4 pr-4.5">
+            <ul class="w-full flex flex-col items-center gap-3">
+                <li>
+                    <!-- Calender-->
+                    <button class="flex justify-center items-center rounded-full h-10 w-10 hover:bg-white/15 cursor-pointer" title="Calender">
+                      <div class="h-4.5 w-4.5 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/2048px-Google_Calendar_icon_%282020%29.svg.png')] bg-contain bg-no-repeat flex"></div>
+                    </button>
+                </li>
+                <li>
+                    <!-- Keep -->
+                     <button class="flex justify-center items-center rounded-full h-10 w-10 hover:bg-white/15 cursor-pointer" title="Keep">
+                      <div class="h-4.5 w-4.5 bg-[url('https://icon-library.com/images/google-keep-icon-png/google-keep-icon-png-4.jpg')] bg-contain bg-no-repeat flex"></div>
+                    </button>
+                </li>
+                <li>
+                    <!-- tasks -->
+                     <button class="flex justify-center items-center rounded-full h-10 w-10 hover:bg-white/15 cursor-pointer" title="Tasks">
+                      <div class="h-9 w-9 bg-[url('https://cdn.freelogovectors.net/wp-content/uploads/2023/01/google-tasks-logo-freelogovectors.net_.png')] bg-contain bg-no-repeat flex mt-3"></div>
+                    </button>
+                </li>
+                <li class=" border-b-[0.1px] border-white/20 pb-3">
+                    <!-- contacts -->
+                    <button class="flex justify-center items-center rounded-full h-10 w-10 hover:bg-white/15 cursor-pointer" title="Contacts">
+                      <div class="h-4.5 w-4.5 bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Google_Contacts_icon_%282022%29.svg/1733px-Google_Contacts_icon_%282022%29.svg.png')] bg-contain bg-no-repeat flex"></div>
+                    </button>
+                </li>
+                <li class="pt-3">
+                    <!-- Add -->
+                     <button class="flex justify-center items-center rounded-full h-9 w-9 hover:bg-white/15 cursor-pointer" title="Get Add-ons">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D9D9D9"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+                     </button>
+                </li>
+            </ul>
+            </div>
+            </div>
+    </div>
+  </body>
+</html>
