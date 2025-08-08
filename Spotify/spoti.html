@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -108,7 +108,7 @@
      <div class="bg-black h-[88%] w-full pl-2 flex flex-row gap-2">
             
         <!-- side bar -->
-        <div class="bg-white/5 h-full w-[23.8%] rounded-md">
+        <div class="bg-white/7 h-full w-[23.8%] rounded-md">
               <!-- library & create&expand -->
             <div class="flex flex-row gap-1 h-[9%] w-full pl-5 justify-between pt-3.5 pr-2">
                 <!-- library -->
@@ -323,7 +323,15 @@
         </div>
 
         <!-- middle div -->
-        <div class="bg-white/5 h-full w-[52.8%]">
+        <div class="bg-white/7 h-full w-[52.8%] group-has/child 
+          transition-opacity duration-800
+          has-[.c-1:hover]:bg-gradient-to-t has-[.c-1:hover]:from-black has-[.c-1:hover]:to-blue-900/70 has-[.c-1:hover]:opacity-85
+          has-[.c-2:hover]:bg-gradient-to-t has-[.c-2:hover]:from-black has-[.c-2:hover]:to-yellow-900/70 has-[.c-2:hover]:opacity-85
+          has-[.c-3:hover]:bg-gradient-to-t has-[.c-3:hover]:from-black has-[.c-3:hover]:to-[#1f383a] has-[.c-3:hover]:opacity-85
+          has-[.c-4:hover]:bg-gradient-to-t has-[.c-4:hover]:from-black has-[.c-4:hover]:to-white/8 has-[.c-4:hover]:opacity-85
+          has-[.c-5:hover]:bg-gradient-to-t has-[.c-5:hover]:from-black has-[.c-5:hover]:to-[#0b1a2c] has-[.c-5:hover]:opacity-90
+          has-[.c-6:hover]:bg-gradient-to-t has-[.c-6:hover]:from-black has-[.c-6:hover]:to-orange-900/50 has-[.c-6:hover]:opacity-85
+          ">
           <!-- first layer -->
           <div  class="flex flex-row gap-1 h-[11%] w-full items-center pl-11 pt-3.5 pb-4 gap-2 pr-2">
                 <!-- all -->
@@ -343,29 +351,29 @@
           <div class="h-[88.5%] w-full flex flex-col overflow-y-auto whitespace-nowrap no-scrollbar">
 
             <!-- recent songs -->
-          <div class="h-[25%] w-full pl-11 pr-11 pb-5.5 pt-0.5 grid grid-cols-12 gap-2 flex-shrink-0">
+          <div class="h-[25%] w-full pl-11 pr-11 pb-5.5 pt-0.5 grid grid-cols-12 gap-2 flex-shrink-0 ">
             <div class="h-full flex flex-col col-span-3 gap-2 ">
                <!-- 1st -->
-              <div class="flex-1 h-[50%] w-full bg-white/10 group rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
+              <div class="flex-1 h-[50%] w-full bg-white/10 c-1 group/sub rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
                 <div class="relative h-full w-[28.5%] bg-[url('https://i1.sndcdn.com/artworks-4Lu85Xrs7UjJ4wVq-vuI2zg-t500x500.jpg')] bg-cover rounded-l-md flex flex-row">
               </div>
               <span class="relative text-[14px] text-white font-bold">
                     Liked Songs 
               </span>
               <!-- play button -->
-              <button class="absolute left-[77%] hidden group-hover:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
+              <button class="absolute left-[77%] hidden group-hover/sub:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="black"><path d="M320-200v-560l440 280-440 280Z"/></svg>
               </button>
               </div>
               <!-- 2nd -->
-              <div class="flex-1 h-[50%] w-full bg-white/10 group rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
+              <div class="flex-1 h-[50%] w-full bg-white/10 c-2 group/sub rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
                 <div class="h-full w-[28.5%] bg-[url('https://fakealbumcovers.com/images/FakeAlbums/cotten_Carnivore.jpeg')] bg-cover rounded-l-md flex flex-row">
               </div>
               <span class="text-[14px] text-white font-bold">
                     -.-.-. 
               </span>
               <!-- play button -->
-              <button class="absolute left-[77%] hidden group-hover:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
+              <button class="absolute left-[77%] hidden group-hover/sub:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="black"><path d="M320-200v-560l440 280-440 280Z"/></svg>
               </button>
               </div>
@@ -373,26 +381,26 @@
 
             <div class="h-full flex flex-col col-span-3 gap-2">
               <!-- 3rd -->
-               <div class="flex-1 h-[50%] w-full bg-white/10 group rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
+               <div class="flex-1 h-[50%] w-full bg-white/10 c-3 group/sub rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
                 <div class="h-full w-[28.5%] bg-[url('https://i.scdn.co/image/ab6761610000e5eb1b41d98a6831d076c45e1d88')] bg-cover rounded-l-md flex flex-row">
               </div>
               <span class="text-[14px] text-white font-bold">
                     Talwinder 
               </span>
              <!-- play button -->
-              <button class="absolute left-[77%] hidden group-hover:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
+              <button class="absolute left-[77%] hidden group-hover/sub:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="black"><path d="M320-200v-560l440 280-440 280Z"/></svg>
               </button>
               </div>
               <!-- 4th -->
-               <div class="flex-1 h-[50%] w-full bg-white/10 group rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
+               <div class="flex-1 h-[50%] w-full bg-white/10 c-4 group/sub rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
                 <div class="h-full w-[28.5%] bg-[url('https://i.pinimg.com/originals/e0/14/09/e014096e7244088c38e9b36ebca8ebb4.png')] bg-cover rounded-l-md flex flex-row">
               </div>
               <span class="text-[14px] text-white font-bold">
                     Seedhe Maut 
               </span>
               <!-- play button -->
-              <button class="absolute left-[77%] hidden group-hover:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
+              <button class="absolute left-[77%] hidden group-hover/sub:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="black"><path d="M320-200v-560l440 280-440 280Z"/></svg>
               </button>
               </div>
@@ -400,26 +408,26 @@
 
             <div class="h-full flex flex-col col-span-3 gap-2">
               <!-- 5th -->
-               <div class="flex-1 h-[50%] w-full bg-white/10 group rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
+               <div class="flex-1 h-[50%] w-full bg-white/10 c-5 group/sub rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
                 <div class="h-full w-[28.5%] bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDSFmgMsSnPIFXjkibizjyTYCv4i9A3gBiLw&s')] bg-cover rounded-l-md flex flex-row">
               </div>
               <span class="text-[14px] text-white font-bold">
                     Sherdil 
               </span>
               <!-- play button -->
-              <button class="absolute left-[77%] hidden group-hover:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
+              <button class="absolute left-[77%] hidden group-hover/sub:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="black"><path d="M320-200v-560l440 280-440 280Z"/></svg>
               </button>
               </div>
               <!-- 6th -->
-               <div class="flex-1 h-[50%] w-full bg-white/10 group rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
+               <div class="flex-1 h-[50%] w-full bg-white/10 c-6 group/sub rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
                 <div class="h-full w-[28.5%] bg-[url('https://images.genius.com/9f5f3353cd4dfc6b77b320fff8818495.1000x1000x1.png')] bg-cover rounded-l-md flex flex-row">
               </div>
               <span class="text-[14px] text-white font-bold">
                     VVVV 
               </span>
               <!-- play button -->
-              <button class="absolute left-[77%] hidden group-hover:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
+              <button class="absolute left-[77%] hidden group-hover/sub:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="black"><path d="M320-200v-560l440 280-440 280Z"/></svg>
               </button>
               </div>
@@ -427,26 +435,26 @@
 
             <div class="h-full flex flex-col col-span-3 gap-2 ">
               <!-- 7th -->
-               <div class="flex-1 h-[50%] w-full bg-white/10 group rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
+               <div class="flex-1 h-[50%] w-full bg-white/10 c-4 group/sub rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
                 <div class="h-full w-[28.5%] bg-[url('https://i.scdn.co/image/ab67616d0000b27305be603d0ab07ff5b195554e')] bg-cover rounded-l-md flex flex-row">
               </div>
               <span class="text-[14px] text-white font-bold">
                     Haseen 
               </span>
              <!-- play button -->
-              <button class="absolute left-[77%] hidden group-hover:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
+              <button class="absolute left-[77%] hidden group-hover/sub:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="black"><path d="M320-200v-560l440 280-440 280Z"/></svg>
               </button>
               </div>
               <!-- 8th -->
-               <div class="flex-1 h-[50%] w-full bg-white/10 group rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
+               <div class="flex-1 h-[50%] w-full bg-white/10 c-4 group/sub rounded-md flex flex-row gap-2 text-center items-center hover:bg-white/20 cursor-pointer relative">
                 <div class="h-full w-[28.5%] bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK1cSQMp6OPe1VeskD2aGI-9SL86d3jYkthw&s')] bg-cover rounded-l-md flex flex-row">
               </div>
               <span class="text-[14px] text-white font-bold">
                     DL91FM 
               </span>
               <!-- play button -->
-              <button class="absolute left-[77%] hidden group-hover:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
+              <button class="absolute left-[77%] hidden group-hover/sub:block hover:scale-105 active:scale-95 transition-transform duration-100 bg-green-400 h-[62%] w-[18%] rounded-full flex flex-row items-center justify-center cursor-pointer pl-0.5 shadow-lg shadow-black">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="black"><path d="M320-200v-560l440 280-440 280Z"/></svg>
               </button>
               </div>
@@ -843,7 +851,7 @@
                SWAH</span>
                <span class="flex flex-row text-white/70 text-[12px] hover:underline flex-shrink-0">Seedhe maut,Badshah</span>
             </div>
-          <div class="bg-green-500 h-[30%] w-[6%] rounded-full flex items-center justify-center cursor-pointer mb-1 flex-shrink-0">
+          <div class="bg-green-500 h-[20%] w-[6%] rounded-full flex items-center justify-center cursor-pointer mb-1 flex-shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
           </div>
             </div>
@@ -931,3 +939,5 @@
   </div>
 </body>
 </html>
+      
+          
